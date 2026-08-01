@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Order Book &amp; Markets | Apex Commodities</title>
+    <meta name="description" content="Explore real-time bid/ask order books, 24/7 futures contracts, and physical commodity vault enclaves on Apex Commodities.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Announcement Banner -->
+    <div class="apex-top-banner">
+        <span>APEX v2 LIVE: Sub-Millisecond AI Commodity Order Routing &amp; 24/7 Futures.</span>
+        <a href="markets.html">Launch Terminal &rarr;</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Apex Commodities Logo" class="logo-img">
+                <span>Apex <span class="fw-normal text-muted">Commodities</span></span>
+            </a>
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="markets.html">Live Order Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screener">Precious Metals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screener">Energy &amp; Oil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screener">Vault Storage</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn-apex-outline btn-sm px-3" data-bs-toggle="modal" data-bs-target="#tradeModal">
+                        Log In
+                    </button>
+                    <button class="btn-apex-emerald btn-sm px-4" data-bs-toggle="modal" data-bs-target="#tradeModal">
+                        Launch Terminal <i class="bi bi-cpu-fill ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Header -->
+        <section class="hero-section text-center">
+            <div class="container">
+                <h1 class="hero-title mb-3">Live Order Book &amp; Commodity Screener</h1>
+                <p class="hero-lead mb-4">
+                    Sub-millisecond bid/ask order matching, 24/7 futures contracts, and physical bullion vault storage.
+                </p>
+
+                <!-- Filter Screener Buttons -->
+                <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
+                    <button class="btn screener-filter-btn btn-apex-emerald active" data-category="all">All Markets</button>
+                    <button class="btn screener-filter-btn btn-apex-outline" data-category="metals">Precious Metals</button>
+                    <button class="btn screener-filter-btn btn-apex-outline" data-category="energy">Energy &amp; Oil</button>
+                    <button class="btn screener-filter-btn btn-apex-outline" data-category="agri">Agriculture</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commodity Market Screener List -->
+        <section class="pb-5" id="screener">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <div class="apex-card market-row-item mb-3 d-flex justify-content-between align-items-center flex-wrap gap-3" data-category="metals">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold font-monospace" style="width: 44px; height: 44px;">
+                                    XAU
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-0 text-white">Gold Spot &amp; Futures ($XAU)</h4>
+                                    <span class="text-muted small font-monospace">Precious Metals &middot; Sub-MS Matching</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="text-end">
+                                    <div class="h5 font-monospace fw-bold mb-0 text-white">$2,420.50 / oz</div>
+                                    <span class="badge-gain">+1.45% (+$34.60)</span>
+                                </div>
+                                <button class="btn-apex-emerald btn-sm px-4" data-bs-toggle="modal" data-bs-target="#tradeModal">
+                                    Trade &rarr;
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="apex-card market-row-item mb-3 d-flex justify-content-between align-items-center flex-wrap gap-3" data-category="energy">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold font-monospace" style="width: 44px; height: 44px;">
+                                    WTI
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-0 text-white">Crude Oil ($WTI)</h4>
+                                    <span class="text-muted small font-monospace">Energy &middot; 24/7 Futures</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="text-end">
+                                    <div class="h5 font-monospace fw-bold mb-0 text-white">$78.45 / bbl</div>
+                                    <span class="badge-loss">-0.62% (-$0.49)</span>
+                                </div>
+                                <button class="btn-apex-emerald btn-sm px-4" data-bs-toggle="modal" data-bs-target="#tradeModal">
+                                    Trade &rarr;
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="apex-card market-row-item mb-3 d-flex justify-content-between align-items-center flex-wrap gap-3" data-category="metals">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold font-monospace" style="width: 44px; height: 44px;">
+                                    XAG
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-0 text-white">Silver ($XAG)</h4>
+                                    <span class="text-muted small font-monospace">Precious Metals &middot; Spot &amp; Futures</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="text-end">
+                                    <div class="h5 font-monospace fw-bold mb-0 text-white">$28.30 / oz</div>
+                                    <span class="badge-gain">+2.10% (+$0.58)</span>
+                                </div>
+                                <button class="btn-apex-emerald btn-sm px-4" data-bs-toggle="modal" data-bs-target="#tradeModal">
+                                    Trade &rarr;
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="apex-card market-row-item mb-3 d-flex justify-content-between align-items-center flex-wrap gap-3" data-category="energy">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center fw-bold font-monospace" style="width: 44px; height: 44px;">
+                                    NG
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-0 text-white">Natural Gas ($NG)</h4>
+                                    <span class="text-muted small font-monospace">Energy &middot; 24/7 Futures</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="text-end">
+                                    <div class="h5 font-monospace fw-bold mb-0 text-white">$2.15 / MMBtu</div>
+                                    <span class="badge-gain">+3.22% (+$0.07)</span>
+                                </div>
+                                <button class="btn-apex-emerald btn-sm px-4" data-bs-toggle="modal" data-bs-target="#tradeModal">
+                                    Trade &rarr;
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="apex-card market-row-item mb-3 d-flex justify-content-between align-items-center flex-wrap gap-3" data-category="agri">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-success text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold font-monospace" style="width: 44px; height: 44px; background-color: #00c805;">
+                                    ZW
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-0 text-white">Wheat ($ZW)</h4>
+                                    <span class="text-muted small font-monospace">Agriculture &middot; Futures</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="text-end">
+                                    <div class="h5 font-monospace fw-bold mb-0 text-white">$540.25 / bu</div>
+                                    <span class="badge-gain">+1.10% (+$5.88)</span>
+                                </div>
+                                <button class="btn-apex-emerald btn-sm px-4" data-bs-toggle="modal" data-bs-target="#tradeModal">
+                                    Trade &rarr;
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-white mb-3" href="index.html">
+                        <img src="logo.png" alt="Apex Logo" class="logo-img">
+                        <span>Apex Commodities</span>
+                    </a>
+                    <p class="text-muted small pe-lg-4">
+                        Apex Commodities by Robinhood &middot; Member SIPC. Institutional 24/7 AI-powered commodity exchange.
+                    </p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Markets</h5>
+                    <ul>
+                        <li><a href="markets.html">Gold &amp; Metals</a></li>
+                        <li><a href="markets.html">Energy &amp; Oil</a></li>
+                        <li><a href="markets.html">Agriculture</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="index.html">24/7 Futures</a></li>
+                        <li><a href="index.html">AI Order Routing</a></li>
+                        <li><a href="index.html">Vault Storage</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Connect</h5>
+                    <p class="text-muted small">Follow Robinhood Financial on X.</p>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="https://x.com/RobinhoodApp" target="_blank" title="Robinhood X"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top border-dark pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="mb-0 text-muted small">&copy; 2026 Robinhood Financial LLC &amp; Apex Commodities Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Trade Modal -->
+    <div class="modal fade" id="tradeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-2">
+                <div class="modal-header border-bottom border-dark">
+                    <h5 class="modal-title fw-bold text-white"><i class="bi bi-cpu text-success me-2"></i> Apex AI Order Execution</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form onsubmit="event.preventDefault(); alert('Apex AI Order Executed! Sub-millisecond fill confirmed.'); bootstrap.Modal.getInstance(document.getElementById('tradeModal')).hide();">
+                        <div class="mb-3">
+                            <label class="form-label text-muted small">Order Type</label>
+                            <select class="form-select font-monospace">
+                                <option selected>AI Market Order (Sub-Millisecond)</option>
+                                <option>Limit Order</option>
+                                <option>24/7 Leveraged Futures</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted small">Amount in USD</label>
+                            <input type="number" class="form-control font-monospace" placeholder="$500.00" required>
+                        </div>
+                        <button type="submit" class="btn-apex-emerald w-100 py-3 mt-2 justify-content-center">
+                            Confirm AI Order Execution <i class="bi bi-lightning-fill ms-1"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS & App Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
